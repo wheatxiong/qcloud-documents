@@ -47,6 +47,7 @@
 | CosSecretKey | 否 | String | 访问 COS 的SecretKey，参见 [COS 基本概念-SecretId/SecretKey](https://cloud.tencent.com/document/product/436/6225) |
 | SupportHA | 是 | Uint | 是否支持高可用 |
 | CvmCharge | 是 | Int | CVM 计费模式，0：按量计费，1：包年包月。如有 hive 等组件会自动申请 TencentDB，则 TencentDB 的计费方式和 CVM 一致。 |
+| TimeSpan | 否 | Int | 包月时长，单位月。仅支持[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60]这些月份 |
 | SgId | 否 | String | 外网 IP 的 CVM，安全组 ID，如果填写了安全组则使用已有安全组。如未填，则会新建一个安全组。不管使用已有还是新建安全组，入站规则仅会开放 22 和 3001 端口，如需更改可在 CVM 安全组修改，参见 [安全组](https://cloud.tencent.com/document/product/416/7596) |
 | ProjectId | 否 | Uint | 项目 ID 可以在账户信息，项目管理中查看，不填则使用 0(默认项目)|
 
